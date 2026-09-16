@@ -36,6 +36,7 @@ def main():
         moves += 1
 
         if command == "quit":
+            print("Thanks for playing!")
             break
         elif command == "help":
             print("Commands: look, take <item>, drop <item>, examine <item>, inventory, help, quit, or a direction (north/south/east/west)")
