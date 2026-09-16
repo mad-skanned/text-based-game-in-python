@@ -1,3 +1,4 @@
+# Each room has a description, available exits, and items that can be picked up.
 rooms = {
     "hallway": {
         "description": "A dusty hallway. Exits lead north and south.",
@@ -22,9 +23,9 @@ rooms = {
 }
 
 def main():
-    current_room = "hallway"
-    inventory = []
-    moves = 0
+    current_room = "hallway"  # player's current location, a key into rooms
+    inventory = []  # items the player is carrying
+    moves = 0  # number of valid commands entered
     print("Welcome to the adventure.")
     print(rooms[current_room]["description"])
 
