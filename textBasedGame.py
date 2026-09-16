@@ -24,6 +24,7 @@ rooms = {
 def main():
     current_room = "hallway"
     inventory = []
+    moves = 0
     print("Welcome to the adventure.")
     print(rooms[current_room]["description"])
 
@@ -32,7 +33,9 @@ def main():
 
         if command == "":
             continue
-        elif command == "quit":
+        moves += 1
+
+        if command == "quit":
             break
         elif command == "help":
             print("Commands: look, take <item>, drop <item>, examine <item>, inventory, help, quit, or a direction (north/south/east/west)")
