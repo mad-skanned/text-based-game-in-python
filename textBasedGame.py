@@ -18,6 +18,7 @@ rooms = {
 
 def main():
     current_room = "hallway"
+    inventory = []
     print("Welcome to the adventure.")
     print(rooms[current_room]["description"])
 
@@ -28,6 +29,16 @@ def main():
             break
         elif command == "look":
             print(rooms[current_room]["description"])
+            if rooms[current_room]["items"]:
+                print("You see:", ", ".join(rooms[current_room]["items"]))
+        elif command.startswith("take "):
+            item = command[5:]
+            if item in rooms[current_room]["items"]:
+                rooms[current_room]["items"].remove(item)
+                inventory.append(item)
+                print(f"You take the {item}.")
+            else:
+                print("There's nothing like that here.")
         elif command in rooms[current_room]["exits"]:
             current_room = rooms[current_room]["exits"][command]
             print(rooms[current_room]["description"])
