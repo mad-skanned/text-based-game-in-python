@@ -16,7 +16,13 @@ rooms = {
 def main():
     current_room = "hallway"
     print("Welcome to the adventure.")
-    print(rooms[current_room]["description"])
+
+    while True:
+        print(rooms[current_room]["description"])
+        command = input("> ").strip().lower()
+
+        if command == "quit":
+            break
 
 if __name__ == "__main__":
     main()
