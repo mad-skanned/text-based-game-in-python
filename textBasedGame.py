@@ -50,8 +50,12 @@ def main():
             else:
                 print("You aren't carrying anything.")
         elif command in rooms[current_room]["exits"]:
-            current_room = rooms[current_room]["exits"][command]
-            print(rooms[current_room]["description"])
+            destination = rooms[current_room]["exits"][command]
+            if destination == "shed" and "key" not in inventory:
+                print("The shed is locked. You need a key.")
+            else:
+                current_room = destination
+                print(rooms[current_room]["description"])
         else:
             print("You can't go that way.")
 
