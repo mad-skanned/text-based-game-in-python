@@ -32,6 +32,8 @@ def main():
 
         if command == "quit":
             break
+        elif command == "help":
+            print("Commands: look, take <item>, inventory, help, quit, or a direction (north/south/east/west)")
         elif command == "look":
             print(rooms[current_room]["description"])
             if rooms[current_room]["items"]:
