@@ -12,7 +12,7 @@ rooms = {
     "garden": {
         "description": "A quiet garden. An exit leads north. There is a locked shed to the east.",
         "exits": {"north": "hallway", "east": "shed"},
-        "items": [],
+        "items": ["flower"],
     },
     "shed": {
         "description": "Inside the shed, sunlight streaks through the cracks. You made it.",
