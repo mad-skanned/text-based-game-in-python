@@ -78,7 +78,7 @@ def main():
                     print("You win!")
                     break
         else:
-            print("You can't go that way.")
+            print("Unknown command. Type 'help' for options.")
 
 if __name__ == "__main__":
     main()
