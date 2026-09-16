@@ -56,6 +56,9 @@ def main():
             else:
                 current_room = destination
                 print(rooms[current_room]["description"])
+                if current_room == "shed":
+                    print("You win!")
+                    break
         else:
             print("You can't go that way.")
 
