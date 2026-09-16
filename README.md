@@ -18,3 +18,10 @@ textBasedGame.py
 - `help` — list commands
 - `quit` — exit the game
 - direction (`north`, `south`, `east`, `west`) — move between rooms
+
+## Possible future additions
+
+- More rooms and branching paths
+- Multiple puzzles instead of a single key/door
+- Randomized item placement
+- Save/load game state
