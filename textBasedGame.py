@@ -23,6 +23,10 @@ def main():
 
         if command == "quit":
             break
+        elif command in rooms[current_room]["exits"]:
+            current_room = rooms[current_room]["exits"][command]
+        else:
+            print("You can't go that way.")
 
 if __name__ == "__main__":
     main()
