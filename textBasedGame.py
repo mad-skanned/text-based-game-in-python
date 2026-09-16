@@ -2,14 +2,17 @@ rooms = {
     "hallway": {
         "description": "A dusty hallway. Exits lead north and south.",
         "exits": {"north": "kitchen", "south": "garden"},
+        "items": [],
     },
     "kitchen": {
         "description": "An old kitchen. An exit leads south.",
         "exits": {"south": "hallway"},
+        "items": ["key"],
     },
     "garden": {
         "description": "A quiet garden. An exit leads north.",
         "exits": {"north": "hallway"},
+        "items": [],
     },
 }
 
