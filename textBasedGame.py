@@ -33,7 +33,7 @@ def main():
         if command == "quit":
             break
         elif command == "help":
-            print("Commands: look, take <item>, drop <item>, inventory, help, quit, or a direction (north/south/east/west)")
+            print("Commands: look, take <item>, drop <item>, examine <item>, inventory, help, quit, or a direction (north/south/east/west)")
         elif command == "look":
             print(rooms[current_room]["description"])
             if rooms[current_room]["items"]:
@@ -54,6 +54,12 @@ def main():
                 print(f"You drop the {item}.")
             else:
                 print("You aren't carrying that.")
+        elif command.startswith("examine "):
+            item = command[8:]
+            if item in inventory or item in rooms[current_room]["items"]:
+                print(f"It's a {item}. Nothing special stands out.")
+            else:
+                print("You don't see that here.")
         elif command == "inventory":
             if inventory:
                 print("You are carrying:", ", ".join(inventory))
