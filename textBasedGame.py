@@ -50,7 +50,10 @@ def main():
             if item in rooms[current_room]["items"]:
                 rooms[current_room]["items"].remove(item)
                 inventory.append(item)
-                print(f"You take the {item}.")
+                if item == "key":
+                    print("You take the key. It's cold to the touch.")
+                else:
+                    print(f"You take the {item}.")
             else:
                 print("There's nothing like that here.")
         elif command.startswith("drop "):
