@@ -78,7 +78,7 @@ def main():
                 current_room = destination
                 print(rooms[current_room]["description"])
                 if current_room == "shed":
-                    print("You win!")
+                    print(f"You win! It took you {moves} moves.")
                     break
         else:
             print("Unknown command. Type 'help' for options.")
