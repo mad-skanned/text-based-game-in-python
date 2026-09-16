@@ -1,6 +1,7 @@
 # Text Adventure
 
 A small text-based adventure game written in Python.
+**Status:** Playable — hallway → kitchen → garden → shed, with items, inventory, and a locked-door puzzle.
 
 ## How to run
 
