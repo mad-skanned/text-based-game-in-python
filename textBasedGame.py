@@ -26,7 +26,7 @@ def main():
     current_room = "hallway"  # player's current location, a key into rooms
     inventory = []  # items the player is carrying
     moves = 0  # number of valid commands entered
-    print("Welcome to the adventure.")
+    print("Welcome to the adventure. You wake up in a dusty hallway, unsure how you got here.")
     print(rooms[current_room]["description"])
 
     while True:
