@@ -14,7 +14,9 @@ rooms = {
 }
 
 def main():
+    current_room = "hallway"
     print("Welcome to the adventure.")
+    print(rooms[current_room]["description"])
 
 if __name__ == "__main__":
     main()
