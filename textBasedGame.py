@@ -39,6 +39,11 @@ def main():
                 print(f"You take the {item}.")
             else:
                 print("There's nothing like that here.")
+        elif command == "inventory":
+            if inventory:
+                print("You are carrying:", ", ".join(inventory))
+            else:
+                print("You aren't carrying anything.")
         elif command in rooms[current_room]["exits"]:
             current_room = rooms[current_room]["exits"][command]
             print(rooms[current_room]["description"])
