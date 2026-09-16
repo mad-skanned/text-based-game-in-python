@@ -16,15 +16,18 @@ rooms = {
 def main():
     current_room = "hallway"
     print("Welcome to the adventure.")
+    print(rooms[current_room]["description"])
 
     while True:
-        print(rooms[current_room]["description"])
         command = input("> ").strip().lower()
 
         if command == "quit":
             break
+        elif command == "look":
+            print(rooms[current_room]["description"])
         elif command in rooms[current_room]["exits"]:
             current_room = rooms[current_room]["exits"][command]
+            print(rooms[current_room]["description"])
         else:
             print("You can't go that way.")
 
