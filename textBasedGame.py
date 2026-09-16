@@ -30,7 +30,9 @@ def main():
     while True:
         command = input("> ").strip().lower()
 
-        if command == "quit":
+        if command == "":
+            continue
+        elif command == "quit":
             break
         elif command == "help":
             print("Commands: look, take <item>, drop <item>, examine <item>, inventory, help, quit, or a direction (north/south/east/west)")
